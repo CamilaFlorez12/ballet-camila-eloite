@@ -72,6 +72,17 @@ button{
     background-size: cover;
     z-index: -1;
 }
+.fondo::before{
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin:0;
+    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("../img/bellet2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
 .estilos{
     width: 100vw;
     height: 100vh;
@@ -156,4 +167,56 @@ button{
     text-align: center;
     padding: 1vh;
     text-align: justify;
+}
+/*galeria*/
+.galeria{
+    display: flex;
+    overflow-x: auto;
+    gap: 3rem;
+    padding: 1rem;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+.siguiente-imagen{
+    position: relative;
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    transform: translateY(0px);
+}
+.siguiente-imagen img{
+    width: 50vw;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #030322 ;
+    margin-top: 5vh;
+    height:60vh;
+    z-index: 0;
+    transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.siguiente-imagen:hover{
+    transform: scale(1.3);
+}
+.siguiente-imagen:hover figcaption{
+    opacity: 1;
+}
+.galeria::-webkit-scrollbar{
+    display: none;
+}
+figcaption{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 1rem;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    z-index: 1;
 }
