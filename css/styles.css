@@ -93,56 +93,67 @@ button{
 }
 .contenedor-pag-estilos{
     display: flex;
-    gap: 3vh;
-    height: 100vh;
+    gap: 5vh;
+    margin-top: 10vh;
+    justify-content: space-around;
 }
-.carta{
-    width: 100%;
-    height: 100%;
+.tarjeta{
+    width: 30vh;
+    height: 45vh;
     perspective: 1000px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    
 }
-.cara-frontal{
+.contenido{
     width: 100%;
     height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-    border-radius: 20px;
-    overflow: hidden;
-    transition: transform 1s;
-    z-index: 2;
-    display: flex;
-    height: 50vh;
-   
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 2.5s;
 }
-.carta:hover .cara-frontal{
+.tarjeta:hover .contenido{
     transform: rotateY(180deg);
 }
-.carta:hover .cara-trasera{
-    transform: rotateY(0deg);
+.cara-frontal,.cara-trasera{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   backface-visibility: hidden;
+   border-radius: 10px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   box-shadow: 3px 3px 10px;
 }
+.cara-trasera{
+    color: white;
+    transform: rotateY(180deg);
+}
+
 .cara-frontal img{
-    width:100%;
+    width:30vh;
+    height: 45vh;
+    border-radius: 10px;
 }
 .estilos-titulo{
+    width: 100%;
+    height: 100%;
+    position: relative;
     text-align: center;
     padding: 2vh;
     font-family:'Segoe UI';
     font-size: 5rem;
     color: white;
 }
-.carta h2 {
+.cara-trasera h2 {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: white;
     text-align: center;
 }
-.carta p{
-    font-size: 1.5rem;
-    color: #040425;
+.cara-trasera p{
+    font-size: 1.2rem;
+    color: white;
     text-align: center;
-    padding: 5vh;
+    padding: 1vh;
+    text-align: justify;
 }
