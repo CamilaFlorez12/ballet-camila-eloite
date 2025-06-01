@@ -359,6 +359,81 @@ footer{
 .informacion a{
     box-shadow: none;
 }
+/*lago de los cisnes info*/
+.mejor-bailarina{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.mejor-bailarina h2{
+    text-align: center;
+    line-height: 5rem;
+    color: white;
+}
+.mejor-bailarina h1{
+    text-align: center;
+    line-height: 5rem;
+    color: white;
+    font-size: 3rem;
+}
+.foto{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:"foto texto";
+}
+.mejor-bailarina img {
+    grid-area: foto;
+    width: 20vw;
+    margin-left: 30vh;
+    
+}
+.foto p{
+    grid-area: texto;
+    color: white;
+    margin-top: 10vh;
+    padding: 2vh;
+}
+.video{
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+    grid-template-areas: "video texto"
+}
+.video video{
+    grid-area: video;
+    width: 30vw;
+    margin-left: 20vh;
+}
+.texto-video{
+    grid-area: texto;
+    display: grid;
+    grid-template-rows:  1fr 1fr;
+    grid-template-areas: "texto"
+                        "boton";
+    color: white;
+    
+}
+
+.boton-lago{
+     grid-area:boton ;
+     justify-self: flex-end;
+     margin-right: 2rem;
+}
+.boton-lago button{
+    padding: 1rem;
+    font-size: 1.5rem;
+    background-color: #030322;
+    color: white;
+    border-radius: 10px;
+}
+.imagen-durmiente{
+    width: 30vw!important;
+}
+.imagen-romeo{
+    width: 18vw!important;
+}
+.cisnes{
+    width: 15vw!important;
+}
 @media (max-width:800px){
 .inicio{
     height: 100%;
@@ -456,5 +531,55 @@ form h2{
     color: white;
     font-size: 1.5rem;
     padding: 2vh;
+}
+.mejor-bailarina img {
+    margin-left: 9vh;
+}
+.foto p{
+    font-size: 0.6rem;
+    margin-top: 0vh;
+    padding: 0vh;
+}
+.cisnes{
+    width: 30vw!important;
+}
+.video video{
+    grid-area: video;
+    width: 45vw;
+    margin-top: 5vh;
+    margin-left: 2vh;
+}
+.video p{
+    margin-top: 5vh;
+    font-size: 0.6rem;
+}
+.texto-video{
+    grid-area: texto;
+    display: grid;
+    grid-template-rows:  1fr 1fr;
+    grid-template-areas: "texto"
+                        "boton";
+    color: white;
+}
+.boton-lago button{
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin-top: 5vh;
+}
+.mapa{
+    margin-top: 5vh;
+    height: 30vh;
+    width: 80vw;
+    margin-left: 6vh;
+}
+.contacto{
+    margin-top: 19vh;
+    line-height: 3rem;
+    font-size: 1rem;
+}
+.informacion{
+    margin-top: 20vh;
+    line-height: 2rem;
+    font-size: 0.8rem;
 }
 }
