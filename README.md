@@ -49,11 +49,8 @@ El sitio contiene las siguientes secciones/páginas:
 
 ### 📸 Capturas de pantalla
 
-```markdown
-![Inicio](./imagenes/captura-inicio.png)
-![Estilos](./imagenes/captura-estilos.png)
-![API Enseñanza](./imagenes/captura-api.png)
-📁 Guarda estas imágenes en una carpeta llamada imagenes/ dentro de tu repositorio.
+![Maquetación de la página](./img/maquetacion.png)
+👉 [Haz clic aquí para ver el diseño completo en Figma](https://www.figma.com/design/tdbwcx8uqFA1bfWPZVJITh/Sin-t%C3%ADtulo?node-id=0-1&t=FU4PwPslRLuPJ7bN-1)
 
 🗂️ Estructura del Proyecto
 plaintext
