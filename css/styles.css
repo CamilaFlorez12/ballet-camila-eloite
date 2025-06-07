@@ -56,10 +56,11 @@ body,html{
     font-family: sans-serif;
     font-size: 2rem;
     width: 40vw;
-    margin-left: 100vh;
     border-radius: 20px;
     box-shadow: 3px 3px 6px;
     position: absolute;
+    bottom: 5vh;
+    right: 5vw;
 }
 .inicio::before{
     content:"";
@@ -213,13 +214,13 @@ figcaption{
 }
 /*comentarios*/
 .comentarios-principal{
-    margin-top: 0;
-    padding-top: 0;
     display: grid;
     grid-template-columns: 1fr 1fr ;
-    grid-template-rows: 1fr;
     grid-template-areas: "comentarios formulario";
-    gap: 2vh;
+    gap: 4vh;
+    align-items: start;
+    width: 100%;
+    height: 70%;
 }
 .comentarios{
     grid-area: comentarios;
@@ -236,7 +237,9 @@ figcaption{
     border-radius: 10px;
     box-shadow: 3px 3px 5px black;
     width: 30vh;;
-    height: 60vh;
+    height: auto;
+    max-height: 40vh;
+    overflow-y: auto;
     z-index: 1;
     opacity: 0.7;
 }
@@ -267,13 +270,11 @@ form{
     grid-area: formulario;
     display: flex;
     flex-direction: column;
-    width: 90%;
-    max-width: 600px;
-    margin:0 auto;
+    width: 100%;
+    max-width: 450px;
+    height: 90%; 
     background-color: #030322;
     border-radius: 10px;
-    box-sizing: border-box;
-    z-index: 1;
     opacity: 0.8;
     align-items: center;
     color: white;
@@ -293,7 +294,7 @@ form label{
     color: white;
     box-shadow: 3px 3px 5px;
 }
-form input,form textarea{
+form input{
     padding: 1vh;
     border-radius: 10px;
     width: 90%;
@@ -301,7 +302,14 @@ form input,form textarea{
     box-sizing: border-box;
     max-height: 200px;
 }
-
+form textarea{
+    padding: 2vh;
+    border-radius: 10px;
+    width: 90%;
+    text-align: center;
+    box-sizing: border-box;
+    max-height: 200px;
+}
 form h2{
     color: white;
     font-size: 2rem;
@@ -325,7 +333,10 @@ form p{
 }
 .mapa{
     height: 50vh;
-    margin-left: 25vh;
+    margin: 0 auto;
+    display: block;
+    width: 90vw;
+    max-width: 100%;
 }
 .titulo-contacto {
     color: white;
@@ -384,7 +395,9 @@ footer{
 .mejor-bailarina img {
     grid-area: foto;
     width: 20vw;
-    margin-left: 30vh;
+    padding: 2vh;
+    margin: 0 auto;
+    display: block;
     
 }
 .foto p{
@@ -400,7 +413,7 @@ footer{
 }
 .video video{
     grid-area: video;
-    width: 30vw;
+    width: 27vw;
     margin-left: 20vh;
 }
 .texto-video{
@@ -567,10 +580,8 @@ form h2{
     margin-top: 5vh;
 }
 .mapa{
-    margin-top: 5vh;
-    height: 30vh;
-    width: 80vw;
-    margin-left: 6vh;
+    height: 20vh;
+    margin-top:10vh
 }
 .contacto{
     margin-top: 19vh;
