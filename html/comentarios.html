@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>comentarios</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body class="fondo">
     <header>
         <nav class="navegador">
-            <p><a href="../index.html">INICIO</a></p>
-            <p><a href="./estilos.html">ESTILOS</a></p>
-            <p><a href="./practica.html">PRACTICA</a></p>
-            <p><a href="./galeria.html">GALERIA</a></p>
-            <p><a href="./comentarios.html">COMENTARIOS</a></p>
-            <p><a href="./contacto.html">CONTACTO</a></p>
+            <a href="../index.html"><i class="ri-star-line"></i>INICIO</a>
+            <a href="./estilos.html"><i class="ri-star-line"></i>ESTILOS</a>
+            <a href="./practica.html"><i class="ri-star-line"></i>PRACTICA</a>
+            <a href="./galeria.html"><i class="ri-star-line"></i>GALERIA</a>
+            <a href="./comentarios.html"><i class="ri-star-line"></i>COMENTARIOS</a>
+            <a href="./contacto.html"><i class="ri-star-line"></i>CONTACTO</a>
         </nav>
         <h1 class="estilos-titulo">Comentarios</h1>
     </header>
@@ -36,7 +37,7 @@
                 <p class="nombre">Alejandro Sains</p>
             </article>
         </section>
-        <form method="get" action="comentarios.html">
+        <form method="get" action="comentarios.html" id="formulario">
             <h2>FORMULARIO</h2>
             <p>Escribenos si tienes alguna inquietud o inconformidad</p>
             <label for="nombre">Nombre:*</label>
@@ -47,8 +48,6 @@
             <input type="tel" name="telefono" placeholder="3228567420">
             <label for="asunto">Asunto:*</label>
             <input type="text" name="asunto" placeholder="inquietud" required>
-            <label for="mensaje">Mensaje:*</label>
-            <textarea name="mensaje" placeholder="Escribe tu mensaje" required></textarea>
             <button type="submit" class="boton-comentario">Enviar</button>
         </form>
     </main>
