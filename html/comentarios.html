@@ -6,6 +6,7 @@
     <title>comentarios</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <script type="module" defer src="../js/contacto.js"></script>
 </head>
 <body class="fondo">
     <header>
@@ -37,19 +38,16 @@
                 <p class="nombre">Alejandro Sains</p>
             </article>
         </section>
-        <form method="get" action="comentarios.html" id="formulario">
+        <form id="formulario">
             <h2>FORMULARIO</h2>
             <p>Escribenos si tienes alguna inquietud o inconformidad</p>
-            <label for="nombre">Nombre:*</label>
-            <input type="text" name="nombre" placeholder="Ingresa tu nombre" required>
-            <label for="correo">Correo:*</label>
-            <input type="email" name="correo" placeholder="camila@gmail.com" required>
-            <label for="telefono">Teléfono</label>
-            <input type="tel" name="telefono" placeholder="3228567420">
-            <label for="asunto">Asunto:*</label>
-            <input type="text" name="asunto" placeholder="inquietud" required>
+            <input id="nombre" type="text" placeholder="Ingresa tu nombre">
+            <input id="correo" type="email" placeholder="camila@gmail.com">
+            <input id="telefono" type="tel" placeholder="3228567420">
+            <input id="asunto" type="text"placeholder="inquietud">
             <button type="submit" class="boton-comentario">Enviar</button>
         </form>
+        <div id="mensaje-form" class="mensaje-form"></div>
     </main>
 </body>
 </html>

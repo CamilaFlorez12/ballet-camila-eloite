@@ -1,37 +1,130 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body,html{
+
+body,
+html {
     height: 100%;
+    transition: background-color 0.5s ease, color 5.5 ease;
 }
-.inicio{
+
+.hidden {
+    display: none;
+}
+
+.registro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to right, #005eff, #0345b9, #0101c1, #010147);
+}
+
+#mensaje-registro{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #030322, #010147);
+    color: white;
+    text-align: center;
+}
+#mensaje-registro.visible{
+    display: flex;
+}
+#mensaje-registro a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #3c763d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+#mensaje-registro a:hover {
+    background-color: #2e5e2d;
+}
+.registro h2 {
+    color: white;
+    font-size: 3rem;
+}
+
+#inicio-form {
+    padding: 3vh;
+    height: 25%;
+    width: 20%;
+}
+
+#inicio-form button {
+    padding: 1vh;
+    width: 50%;
+    border-radius: 10px;
+    background: linear-gradient(to right, blue, #010147);
+    color: white;
+}
+
+#inicio-form button:hover {
+    transform: scale(1.1);
+    background-color: blue;
+}
+
+.mensaje-form.enviado {
+    color: white;
+    background-color: #030322;
+    border: 1px solid white;
+}
+
+.mensaje-form.error {
+    color: white;
+    background-color: red;
+    border: 1px solid white;
+}
+
+.mensaje-form {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.inicio {
     height: 100%;
     width: 100%;
     position: relative;
     color: black;
     z-index: 1;
     display: grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: "navegador titulo"
-                        "texto texto"
-                        "enlace enlace";
+        "texto texto"
+        "enlace enlace";
 }
-.navegador{
+
+.navegador {
     grid-area: navegador;
     display: flex;
-    gap:6vh;
+    gap: 6vh;
     padding: 2vh;
     font-size: 1;
 }
-.navegador a, .informacion a{
+
+.navegador a,
+.informacion a {
     text-decoration: none;
     color: white;
     box-shadow: 1px 1px 6px white;
 }
-.titulo{
+
+.titulo {
     grid-area: titulo;
     font-size: 2rem;
     color: white;
@@ -39,18 +132,20 @@ body,html{
     padding: 2vh;
     width: 100%;
 }
-.texto{
+
+.texto {
     grid-area: texto;
     color: white;
     font-size: 4.5rem;
     padding: 2vh;
     margin-top: 30vh;
     margin-left: 10vh;
-    text-align:left;
+    text-align: left;
 }
-.boton-inicio{
+
+.boton-inicio {
     grid-area: enlace;
-    padding: 2vh ;
+    padding: 2vh;
     background-color: #030322;
     color: white;
     font-family: sans-serif;
@@ -62,106 +157,119 @@ body,html{
     bottom: 5vh;
     right: 5vw;
 }
-.inicio::before{
-    content:"";
+
+.inicio::before {
+    content: "";
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    margin:0;
-    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("../img/ballet.jpg");
+    margin: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/ballet.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
 }
-.fondo::before{
-    content:"";
+
+.fondo::before {
+    content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    margin:0;
-    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("../img/bellet2.jpg");
+    margin: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/bellet2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
 }
-.estilos{
+
+.estilos {
     width: 100vw;
     height: 100vh;
     background-color: #05051c;
     position: relative;
     z-index: 1;
 }
-.contenedor-pag-estilos{
+
+.contenedor-pag-estilos {
     display: flex;
     gap: 5vh;
     margin-top: 10vh;
     justify-content: space-around;
 }
-.tarjeta{
+
+.tarjeta {
     width: 30vh;
     height: 45vh;
     perspective: 1000px;
 }
-.contenido{
+
+.contenido {
     width: 100%;
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
     transition: transform 2.5s;
 }
-.tarjeta:hover .contenido{
+
+.tarjeta:hover .contenido {
     transform: rotateY(180deg);
 }
-.cara-frontal,.cara-trasera{
-   position: absolute;
-   width: 100%;
-   height: 100%;
-   backface-visibility: hidden;
-   border-radius: 10px;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   box-shadow: 3px 3px 10px;
+
+.cara-frontal,
+.cara-trasera {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px 10px;
 }
-.cara-trasera{
+
+.cara-trasera {
     color: white;
     transform: rotateY(180deg);
 }
 
-.cara-frontal img{
-    width:30vh;
+.cara-frontal img {
+    width: 30vh;
     height: 45vh;
     border-radius: 10px;
 }
 
-.estilos-titulo{
+.estilos-titulo {
     width: 100%;
     height: 100%;
     position: relative;
     text-align: center;
     padding: 2vh;
-    font-family:'Segoe UI';
+    font-family: 'Segoe UI';
     font-size: 5rem;
     color: white;
 }
+
 .cara-trasera h2 {
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.5rem;
     color: white;
     text-align: center;
 }
-.cara-trasera p{
+
+.cara-trasera p {
     font-size: 1.2rem;
     color: white;
     text-align: center;
     padding: 1vh;
     text-align: justify;
 }
+
 /*galeria*/
-.galeria{
+.galeria {
     display: flex;
     overflow-x: auto;
     gap: 3rem;
@@ -169,32 +277,37 @@ body,html{
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
 }
-.siguiente-imagen{
+
+.siguiente-imagen {
     position: relative;
     flex: 0 0 auto;
     scroll-snap-align: center;
     transform: translateY(0px);
 }
-.siguiente-imagen img{
+
+.siguiente-imagen img {
     width: 50vw;
     border-radius: 20px;
-    box-shadow: 5px 5px 5px #030322 ;
+    box-shadow: 5px 5px 5px #030322;
     margin-top: 5vh;
-    height:60vh;
+    height: 60vh;
     z-index: 0;
     transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-.siguiente-imagen:hover{
+.siguiente-imagen:hover {
     transform: scale(1.3);
 }
-.siguiente-imagen:hover figcaption{
+
+.siguiente-imagen:hover figcaption {
     opacity: 1;
 }
-.galeria::-webkit-scrollbar{
+
+.galeria::-webkit-scrollbar {
     display: none;
 }
-figcaption{
+
+figcaption {
     position: absolute;
     top: 0;
     left: 0;
@@ -212,67 +325,74 @@ figcaption{
     transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
     z-index: 1;
 }
+
 /*comentarios*/
-.comentarios-principal{
+.comentarios-principal {
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: "comentarios formulario";
     gap: 4vh;
     align-items: start;
     width: 100%;
     height: 70%;
 }
-.comentarios{
+
+.comentarios {
     grid-area: comentarios;
     display: flex;
     gap: 2vh;
 }
-.div-comentarios{
-    display:grid;
-    grid-template-rows: repeat(3,1fr);
+
+.div-comentarios {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
     grid-template-areas: "texto"
-                        "imagen"
-                        "nombre";
-    background:linear-gradient(to bottom ,rgb(95, 187, 218),lightblue,white);
+        "imagen"
+        "nombre";
+    background: linear-gradient(to bottom, rgb(95, 187, 218), lightblue, white);
     border-radius: 10px;
     box-shadow: 3px 3px 5px black;
-    width: 30vh;;
+    width: 30vh;
+    ;
     height: auto;
     max-height: 40vh;
     overflow-y: auto;
     z-index: 1;
     opacity: 0.7;
 }
-.opinion{
+
+.opinion {
     grid-area: texto;
     color: black;
     padding: 3vh;
     text-align: center;
 
-} 
+}
 
-.foto-usuario{
+.foto-usuario {
     grid-area: imagen;
     width: 5vw;
     height: 10vh;
     margin-left: 10vh;
     margin-top: 5vh;
-    border-radius:100% ;
+    border-radius: 100%;
     box-shadow: 3px 5px 5px black;
 }
-.nombre{
+
+.nombre {
     grid-area: nombre;
     color: black;
     text-align: center;
     font-size: 2rem;
 }
-form{
+
+form {
     grid-area: formulario;
     display: flex;
     flex-direction: column;
     width: 100%;
     max-width: 450px;
-    height: 90%; 
+    height: 100%;
     background-color: #030322;
     border-radius: 10px;
     opacity: 0.8;
@@ -281,11 +401,13 @@ form{
     padding: 2vw;
     gap: 1vh;
 }
-form label{
+
+form label {
     align-self: flex-start;
     padding-left: 5%;
 }
-.boton-comentario{
+
+.boton-comentario {
     padding: 1vh;
     margin-bottom: 1vh;
     width: 70%;
@@ -294,7 +416,8 @@ form label{
     color: white;
     box-shadow: 3px 3px 5px;
 }
-form input{
+
+form input {
     padding: 1vh;
     border-radius: 10px;
     width: 90%;
@@ -302,7 +425,8 @@ form input{
     box-sizing: border-box;
     max-height: 200px;
 }
-form textarea{
+
+form textarea {
     padding: 2vh;
     border-radius: 10px;
     width: 90%;
@@ -310,14 +434,17 @@ form textarea{
     box-sizing: border-box;
     max-height: 200px;
 }
-form h2{
+
+form h2 {
     color: white;
     font-size: 2rem;
     padding: 2vh;
 }
-form p{
+
+form p {
     color: white;
 }
+
 /*form textarea{
     width: 80%;
     margin-bottom: 0.9vh;
@@ -325,41 +452,47 @@ form p{
     padding: 3vh;
 }*/
 /*contacto*/
-.pregunta-contacto{
+.pregunta-contacto {
     color: white;
     text-align: center;
     font-size: 5vh;
     box-shadow: 5px 5px 5px white;
 }
-.mapa{
+
+.mapa {
     height: 50vh;
     margin: 0 auto;
     display: block;
     width: 90vw;
     max-width: 100%;
 }
+
 .titulo-contacto {
     color: white;
 }
-footer p{
+
+footer p {
     color: white;
 
 }
-footer{
+
+footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "ubicacion informacion";
 }
-.contacto{
-    grid-area:ubicacion;
+
+.contacto {
+    grid-area: ubicacion;
     display: flex;
     flex-direction: column;
     align-items: center;
     line-height: 3.5rem;
     font-size: 1.5rem;
 }
-.informacion{
+
+.informacion {
     grid-area: informacion;
     display: flex;
     flex-direction: column;
@@ -367,230 +500,271 @@ footer{
     line-height: 2.5rem;
     font-size: 1.5rem;
 }
-.informacion a{
+
+.informacion a {
     box-shadow: none;
 }
+
 /*lago de los cisnes info*/
-.mejor-bailarina{
+.mejor-bailarina {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
 }
-.mejor-bailarina h2{
+
+.mejor-bailarina h2 {
     text-align: center;
     line-height: 5rem;
     color: white;
 }
-.mejor-bailarina h1{
+
+.mejor-bailarina h1 {
     text-align: center;
     line-height: 5rem;
     color: white;
     font-size: 3rem;
 }
-.foto{
+
+.foto {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas:"foto texto";
+    grid-template-areas: "foto texto";
 }
+
 .mejor-bailarina img {
     grid-area: foto;
     width: 20vw;
     padding: 2vh;
     margin: 0 auto;
     display: block;
-    
+
 }
-.foto p{
+
+.foto p {
     grid-area: texto;
     color: white;
     margin-top: 10vh;
     padding: 2vh;
 }
-.video{
+
+.video {
     display: grid;
-    grid-template-columns:  1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: "video texto"
 }
-.video video{
+
+.video video {
     grid-area: video;
     width: 27vw;
     margin-left: 20vh;
 }
-.texto-video{
+
+.texto-video {
     grid-area: texto;
     display: grid;
-    grid-template-rows:  1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas: "texto"
-                        "boton";
+        "boton";
     color: white;
-    
+
 }
 
-.boton-lago{
-     grid-area:boton ;
-     justify-self: flex-end;
-     margin-right: 2rem;
+.boton-lago {
+    grid-area: boton;
+    justify-self: flex-end;
+    margin-right: 2rem;
 }
-.boton-lago button{
+
+.boton-lago button {
     padding: 1rem;
     font-size: 1.5rem;
     background-color: #030322;
     color: white;
     border-radius: 10px;
 }
-.imagen-durmiente{
-    width: 30vw!important;
-}
-.imagen-romeo{
-    width: 18vw!important;
-}
-.cisnes{
-    width: 15vw!important;
-}
-@media (max-width:800px){
-.inicio{
-    height: 100%;
-    width: 100%;
-    position: relative;
-    color: black;
-    z-index: 1;
-    display: grid;
-    grid-template-columns:1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas: "navegador"
-                        "titulo"
-                        "texto"
-                        "enlace";
-}
-.texto{
-    font-size: 1.5rem;
-    margin-top: 0vh;
-    text-align:left;
-     padding: 10vh;
-    margin-left: 0vh;
-}
-.boton-inicio{
-    padding: 0vh ;
-    font-size: 1rem;
-    margin-left: 20vh;
-    
-}
-.navegador{
-    gap:1vh;
-    padding: 3vh;
-    font-size: 0.64rem;
-    margin-top: 0vh;
-    width: 100%;
-}
-.titulo{
-    text-align: left;
-    padding: 5vh;
-    
-}
-.inicio::before{
-    background-position: center;
-}
-.estilos-titulo{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    text-align: center;
-    padding: 2vh;
-    font-family:'Segoe UI';
-    font-size: 2.7rem;
-    color: white;
-}
-.contenedor-pag-estilos{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2vh;
-    margin-top: 0vh;
-}
-.siguiente-imagen img{
-    width: 70vw;
-    height:30vh;
-    margin-top: 12vh;
-   
-}
-.comentarios{
-    display: flex;
-    flex-direction: column;
-}
-.div-comentarios{
-    width: 20vh;;
-    height: 25vh;
-}
-.opinion{
-    padding: 2vh;
-    font-size: 0.6rem;
 
-} 
+.imagen-durmiente {
+    width: 30vw !important;
+}
 
-.foto-usuario{
-    width: 10vw;
-    height: 6vh;
-    margin-left: 8vh;
-    margin-top: 0vh;
+.imagen-romeo {
+    width: 18vw !important;
 }
-.nombre{
-    font-size: 1rem;
+
+.cisnes {
+    width: 15vw !important;
 }
-form{
-    width: 30vh;
-    height: 70vh;
-}
-form h2{
-    color: white;
-    font-size: 1.5rem;
-    padding: 2vh;
-}
-.mejor-bailarina img {
-    margin-left: 9vh;
-}
-.foto p{
-    font-size: 0.6rem;
-    margin-top: 0vh;
-    padding: 0vh;
-}
-.cisnes{
-    width: 30vw!important;
-}
-.video video{
-    grid-area: video;
-    width: 45vw;
-    margin-top: 5vh;
-    margin-left: 2vh;
-}
-.video p{
-    margin-top: 5vh;
-    font-size: 0.6rem;
-}
-.texto-video{
-    grid-area: texto;
-    display: grid;
-    grid-template-rows:  1fr 1fr;
-    grid-template-areas: "texto"
-                        "boton";
-    color: white;
-}
-.boton-lago button{
-    padding: 0.5rem;
-    font-size: 1rem;
-    margin-top: 5vh;
-}
-.mapa{
-    height: 20vh;
-    margin-top:10vh
-}
-.contacto{
-    margin-top: 19vh;
-    line-height: 3rem;
-    font-size: 1rem;
-}
-.informacion{
-    margin-top: 20vh;
-    line-height: 2rem;
-    font-size: 0.8rem;
-}
+
+
+@media (max-width:800px) {
+    .inicio {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        color: black;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "navegador"
+            "titulo"
+            "texto"
+            "enlace";
+    }
+
+    .texto {
+        font-size: 1.5rem;
+        margin-top: 0vh;
+        text-align: left;
+        padding: 10vh;
+        margin-left: 0vh;
+    }
+
+    .boton-inicio {
+        padding: 0vh;
+        font-size: 1rem;
+        margin-left: 20vh;
+
+    }
+
+    .navegador {
+        gap: 1vh;
+        padding: 3vh;
+        font-size: 0.64rem;
+        margin-top: 0vh;
+        width: 100%;
+    }
+
+    .titulo {
+        text-align: left;
+        padding: 5vh;
+
+    }
+
+    .inicio::before {
+        background-position: center;
+    }
+
+    .estilos-titulo {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        text-align: center;
+        padding: 2vh;
+        font-family: 'Segoe UI';
+        font-size: 2.7rem;
+        color: white;
+    }
+
+    .contenedor-pag-estilos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2vh;
+        margin-top: 0vh;
+    }
+
+    .siguiente-imagen img {
+        width: 70vw;
+        height: 30vh;
+        margin-top: 12vh;
+
+    }
+
+    .comentarios {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .div-comentarios {
+        width: 20vh;
+        ;
+        height: 25vh;
+    }
+
+    .opinion {
+        padding: 2vh;
+        font-size: 0.6rem;
+
+    }
+
+    .foto-usuario {
+        width: 10vw;
+        height: 6vh;
+        margin-left: 8vh;
+        margin-top: 0vh;
+    }
+
+    .nombre {
+        font-size: 1rem;
+    }
+
+    form {
+        width: 30vh;
+        height: 70vh;
+    }
+
+    form h2 {
+        color: white;
+        font-size: 1.5rem;
+        padding: 2vh;
+    }
+
+    .mejor-bailarina img {
+        margin-left: 9vh;
+    }
+
+    .foto p {
+        font-size: 0.6rem;
+        margin-top: 0vh;
+        padding: 0vh;
+    }
+
+    .cisnes {
+        width: 30vw !important;
+    }
+
+    .video video {
+        grid-area: video;
+        width: 45vw;
+        margin-top: 5vh;
+        margin-left: 2vh;
+    }
+
+    .video p {
+        margin-top: 5vh;
+        font-size: 0.6rem;
+    }
+
+    .texto-video {
+        grid-area: texto;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "texto"
+            "boton";
+        color: white;
+    }
+
+    .boton-lago button {
+        padding: 0.5rem;
+        font-size: 1rem;
+        margin-top: 5vh;
+    }
+
+    .mapa {
+        height: 20vh;
+        margin-top: 10vh
+    }
+
+    .contacto {
+        margin-top: 19vh;
+        line-height: 3rem;
+        font-size: 1rem;
+    }
+
+    .informacion {
+        margin-top: 20vh;
+        line-height: 2rem;
+        font-size: 0.8rem;
+    }
 }
