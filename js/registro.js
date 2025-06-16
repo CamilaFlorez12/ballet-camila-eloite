@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         formRegistro.addEventListener('submit', (evento) => {
             evento.preventDefault();
             console.log("formualrio enviado ")
-            divregistro.style.displa='none';
+            divregistro.style.display='none';
             mensajeRegistro.classList.add('visible');
             formRegistro.reset();
         });

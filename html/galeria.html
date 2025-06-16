@@ -1,78 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>galeria</title>
     <link rel="stylesheet" href="../css/styles.css">
+     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+     
 </head>
+
 <body class="fondo">
-     <header>
-            <nav class="navegador">
-                <p><a href="../index.html">INICIO</a></p>
-                <p><a href="./estilos.html">ESTILOS</a></p>
-                <p><a href="./practica.html">PRACTICA</a></p>
-                <p><a href="./galeria.html">GALERIA</a></p>
-                <p><a href="./comentarios.html">COMENTARIOS</a></p>
-                <p><a href="./contacto.html">CONTACTO</a></p>
-            </nav>
-            <h1 class="estilos-titulo">Galeria</h1>
-        </header>
-        <main class="galeria">
-            <figure class="siguiente-imagen">
-                <a href="./lago-cisnes.html">
-                    <img src="../img/lago-cisnes.png" alt="funcion lago de los cisnes">
-                    <figcaption>
-                        <h3>EL LAGO DE LOS CISNES</h3>
-                        <p>4 de marzo de 1877</p>
-                    </figcaption>
-                </a>
-            </figure>
-            <figure  class="siguiente-imagen">
-                <a href="./bella-durmiente.html">
-                    <img src="../img/la-bella-durmiente.jpg" alt="funcion la bella durmiente">
-                    <figcaption>
-                        <h3>LA BELLA DURMIENTE</h3>
-                        <p>15 de enero de 1890</p>
-                    </figcaption>
-                </a>
-            </figure>   
-             <figure  class="siguiente-imagen">
-                <a href="./cascanueces.html">
-                    <img src="../img/cascanueces.jpg" alt="funcion cancanueces">
-                    <figcaption>
-                        <h3>ELCASCANUECES</h3>
-                        <p>18 de diciembre de 1892</p>
-                    </figcaption>
-                </a>
-            </figure>
-            <figure  class="siguiente-imagen">   
-                <a href="./giselle.html">
-                    <img src="../img/giselle.jpg" alt="funcion giselle">
-                    <figcaption>
-                        <h3>EL BALLET GISELLE</h3>
-                        <p>28 de junio de 1841</p>
-                    </figcaption>
-                </a>
-            </figure>
-             <figure  class="siguiente-imagen"> 
-                <a href="./consagracion-primavera.html">
-                    <img src="../img/consagracion-primavera.jpg" alt="funcion consagracion de la rpimavera">
-                    <figcaption>
-                        <h3>LA CONSAGRACION DE LA PRIMAVERA</h3>
-                        <p>29 de mayo de 1913</p>
-                    </figcaption>
-                </a>
-            </figure>
-             <figure  class="siguiente-imagen"> 
-                <a href="./romeo-julieta.html"> 
-                    <img src="../img/romeo-julieta.jpg" alt="funcion romeo y julieta">
-                    <figcaption>
-                        <h3>ROMEO Y JULIETA</h3>
-                        <p>11 de enero de 1940</p>
-                    </figcaption>
-                </a>
-            </figure>
-        </main>
+    <header>
+        <nav class="navegador">
+            <a href="../index.html"><i class="ri-home-3-line"></i>INICIO</a>
+            <a href="./estilos.html"><i class="ri-palette-line"></i>ESTILOS</a>
+            <a href="./practica.html"><i class="ri-play-circle-line"></i>PRACTICA</a>
+            <a href="./galeria.html"><i class="ri-multi-image-line"></i>GALERIA</a>
+            <a href="./comentarios.html"><i class="ri-speak-line"></i>COMENTARIOS</a>
+            <a href="./contacto.html"><i class="ri-phone-line"></i>CONTACTO</a>
+        </nav>
+        <h1 class="estilos-titulo">Galeria</h1>
+    </header>
+    <main>
+        <div class="galeria">
+            <input type="radio" name="slider" id="slide1" checked>
+            <input type="radio" name="slider" id="slide2">
+            <input type="radio" name="slider" id="slide3">
+            <input type="radio" name="slider" id="slide4">
+            <input type="radio" name="slider" id="slide5">
+            <input type="radio" name="slider" id="slide6">
+            <div class="slider" id="slider">
+                <div class="siguiente-imagen">
+                        <img src="../img/lago-cisnes.png" alt="funcion lago de los cisnes">
+                        <figcaption>
+                            <h3>EL LAGO DE LOS CISNES</h3>
+                            <p>4 de marzo de 1877</p>
+                        </figcaption>
+                </div>
+                <div class="siguiente-imagen">
+                        <img src="../img/la-bella-durmiente.jpg" alt="funcion la bella durmiente">
+                        <figcaption>
+                            <h3>LA BELLA DURMIENTE</h3>
+                            <p>15 de enero de 1890</p>
+                        </figcaption>
+                </div>
+                <div class="siguiente-imagen">
+                        <img src="../img/cascanueces.jpg" alt="funcion cancanueces">
+                        <figcaption>
+                            <h3>ELCASCANUECES</h3>
+                            <p>18 de diciembre de 1892</p>
+                        </figcaption>
+                </div>
+                <div class="siguiente-imagen">
+                        <img src="../img/giselle.jpg" alt="funcion giselle">
+                        <figcaption>
+                            <h3>EL BALLET GISELLE</h3>
+                            <p>28 de junio de 1841</p>
+                        </figcaption>
+                </div>
+                <div class="siguiente-imagen">
+                        <img src="../img/consagracion-primavera.jpg" alt="funcion consagracion de la rpimavera">
+                        <figcaption>
+                            <h3>LA CONSAGRACION DE LA PRIMAVERA</h3>
+                            <p>29 de mayo de 1913</p>
+                        </figcaption>
+                </div>
+                <div class="siguiente-imagen">
+                        <img src="../img/romeo-julieta.jpg" alt="funcion romeo y julieta">
+                        <figcaption>
+                            <h3>ROMEO Y JULIETA</h3>
+                            <p>11 de enero de 1940</p>
+                        </figcaption>
+                </div>
+            </div>
+            <div class="controles">
+                <div class="grupo" id="g1">
+                    <label for="slide6" class="flecha izquierda">&#10094;</label>
+                    <label for="slide2" class="flecha derecha">&#10095;</label>
+                </div>
+                <div class="grupo" id="g2">
+                    <label for="slide1" class="flecha izquierda">&#10094;</label>
+                    <label for="slide3" class="flecha derecha">&#10095;</label>
+                </div>
+                <div class="grupo" id="g3">
+                    <label for="slide2" class="flecha izquierda">&#10094;</label>
+                    <label for="slide4" class="flecha derecha">&#10095;</label>
+                </div>
+                <div class="grupo" id="g4">
+                    <label for="slide3" class="flecha izquierda">&#10094;</label>
+                    <label for="slide5" class="flecha derecha">&#10095;</label>
+                </div>
+                <div class="grupo" id="g5">
+                    <label for="slide4" class="flecha izquierda">&#10094;</label>
+                    <label for="slide6" class="flecha derecha">&#10095;</label>
+                </div>
+                <div class="grupo" id="g6">
+                    <label for="slide5" class="flecha izquierda">&#10094;</label>
+                    <label for="slide1" class="flecha derecha">&#10095;</label>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
+
 </html>

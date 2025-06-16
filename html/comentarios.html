@@ -1,41 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>comentarios</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script type="module" defer src="../js/contacto.js"></script>
+
 </head>
+
 <body class="fondo">
     <header>
         <nav class="navegador">
-            <a href="../index.html"><i class="ri-star-line"></i>INICIO</a>
-            <a href="./estilos.html"><i class="ri-star-line"></i>ESTILOS</a>
-            <a href="./practica.html"><i class="ri-star-line"></i>PRACTICA</a>
-            <a href="./galeria.html"><i class="ri-star-line"></i>GALERIA</a>
-            <a href="./comentarios.html"><i class="ri-star-line"></i>COMENTARIOS</a>
-            <a href="./contacto.html"><i class="ri-star-line"></i>CONTACTO</a>
+            <a href="../index.html"><i class="ri-home-3-line"></i>INICIO</a>
+            <a href="./estilos.html"><i class="ri-palette-line"></i>ESTILOS</a>
+            <a href="./practica.html"><i class="ri-play-circle-line"></i>PRACTICA</a>
+            <a href="./galeria.html"><i class="ri-multi-image-line"></i>GALERIA</a>
+            <a href="./comentarios.html"><i class="ri-speak-line"></i>COMENTARIOS</a>
+            <a href="./contacto.html"><i class="ri-phone-line"></i>CONTACTO</a>
         </nav>
         <h1 class="estilos-titulo">Comentarios</h1>
     </header>
     <main class="comentarios-principal">
         <section class="comentarios">
             <article class="div-comentarios">
-                <p class="opinion">"Garcias a ballet camila éloite,he aprendido más en 3 semans que en meses de clases presenciales.¡Maravilloso!</p>
-                <img src="../img/usuario1.png" alt="Lucia Rios" class="foto-usuario">
-                <p class="nombre">Lucia Rios</p>
+                <p class="opinion">"He aprendido más en 3 semans que en meses de clases presenciales.¡Maravilloso!</p>
+                <img src="../img/cristian.png" alt="cristian" class="foto-usuario">
+                <p class="nombre">cristian</p>
+                <div class="estrellas">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+
             </article>
             <article class="div-comentarios">
                 <p class="opinion">" Brinda mucha información sobre este hermoso arte, Me encanta."</p>
-                <img src="../img/usuario3.png" alt="Lucia Rios" class="foto-usuario">
-                <p class="nombre">María Torres</p>
+                <img src="../img/milena.png" alt="Milena" class="foto-usuario2">
+                <p class="nombre">Milena</p>
+                <div class="estrellas">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+
             </article>
             <article class="div-comentarios">
                 <p class="opinion">"Siento que pertenezco a una comunidad.Los consejos y las clases son muy útiles."</p>
-                <img src="../img/usuario2.png" alt="Alejandro Martinez" class="foto-usuario">
-                <p class="nombre">Alejandro Sains</p>
+                <img src="../img/vanesa.png" alt="Vanesa" class="foto-usuario3">
+                <p class="nombre">Vanesa</p>
+                <div class="estrellas">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+
             </article>
         </section>
         <form id="formulario">
@@ -44,10 +72,11 @@
             <input id="nombre" type="text" placeholder="Ingresa tu nombre">
             <input id="correo" type="email" placeholder="camila@gmail.com">
             <input id="telefono" type="tel" placeholder="3228567420">
-            <input id="asunto" type="text"placeholder="inquietud">
+            <input id="asunto" type="text" placeholder="inquietud">
             <button type="submit" class="boton-comentario">Enviar</button>
         </form>
         <div id="mensaje-form" class="mensaje-form"></div>
     </main>
 </body>
+
 </html>
