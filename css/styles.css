@@ -745,7 +745,7 @@ footer {
     .boton-inicio {
         padding: 1.5vh;
         font-size: 1rem;
-        margin-right: 2vh;
+        margin-right: 15vh;
         margin-bottom: 5vh;
 
     }
@@ -756,17 +756,24 @@ footer {
     width: 50%;
 }
     .navegador {
-        gap: 1vh;
-        padding: 3vh;
+        gap: 0.3vh;
+        padding: 0vh;
         font-size: 0.64rem;
         margin-top: 0vh;
+        margin-left: 1vh;
         width: 100%;
+        text-align: center;
     }
-
+    .navegador a{
+        margin-top: 5vh;
+    }
     .titulo {
         text-align: left;
         padding: 5vh;
 
+    }
+    .inicio .navegador{
+        margin-top: 5vh;
     }
 
     .inicio::before {
@@ -802,6 +809,8 @@ footer {
     .comentarios {
         display: flex;
         flex-direction: column;
+        margin-left: 3vh;
+        gap:0.5vh;
     }
 
     .div-comentarios {
@@ -829,7 +838,7 @@ footer {
 
     form {
         width: 30vh;
-        height: 70vh;
+        height: 50vh;
     }
 
     form h2 {
