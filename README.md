@@ -73,7 +73,7 @@ ballet-camila-eloite/
 │   ├── imagenes-estilos.png   
 │   └── imagenes-api.png       
 │
-└── README.md                   # Documento con información del proyecto
+└── README.md                   
 
 
 👩‍🎨 Autora
