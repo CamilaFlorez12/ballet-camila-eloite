@@ -16,7 +16,7 @@ Está orientada a quienes desean iniciarse en esta disciplina artística, ofreci
 
 - `HTML5`: estructura y contenido.
 - `CSS3`: diseño y estilos visuales.
-- `JavaScript`:FALTA.
+- `JavaScript`:para agregar interactividad como validación de formularios, animaciones suaves y mensajes dinámicos.
 - `GitHub Pages`: para la publicación del sitio.
 
 ---
@@ -33,8 +33,8 @@ El sitio contiene las siguientes secciones/páginas:
 2. **Estilos de Ballet**  
    - Descripción de estilos: clásico, contemporáneo, neoclásico, etc.
 
-3. **API de Enseñanza (simulada)**  
-   FALTA
+3. **API de Enseñanza (ballet)**  
+   - Videos traidos del api "youtube data api v3"
 4. **Galeria obras mas importantes**
    - Información de las obras más importantes en el ballet.
 5. **Comentarios**
