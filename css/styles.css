@@ -582,10 +582,10 @@ form p {
 }
 
 .mapa {
-    height: 50vh;
+    height: auto;
     margin: 0 auto;
     display: block;
-    width: 90vw;
+    width: 50vw;
     max-width: 100%;
 }
 
@@ -889,7 +889,8 @@ footer {
     }
 
     .mapa {
-        height: 20vh;
+        height: auto;
+        width: 90vw;
         margin-top: 10vh
     }
 
