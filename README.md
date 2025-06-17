@@ -53,31 +53,29 @@ El sitio contiene las siguientes secciones/páginas:
 👉 [Haz clic aquí para ver el diseño completo en Figma](https://www.figma.com/design/tdbwcx8uqFA1bfWPZVJITh/Sin-t%C3%ADtulo?node-id=0-1&t=FU4PwPslRLuPJ7bN-1)
 
 🗂️ Estructura del Proyecto
-plaintext
-Copy
-Edit
 ballet-camila-eloite/
-├── index.html
-├── estilos-ballet.html
-├── api-ensenanza.html
+├── index.html                
+├── estilos-ballet.html         
+├── api-ensenanza.html        
+├── galeria-obras.html         
+├── comentarios.html            
+├── contacto.html              
+│
 ├── css/
-│   └── estilos.css
+│   └── estilos.css       
+│
 ├── js/
-│   └── script.js (si lo usas)
+│   └── script.js             
+│
 ├── imagenes/
-│   ├── captura-inicio.png
-│   └── captura-estilos.png
-│   └── captura-api.png
-├── README.md
-📦 Cómo usar el proyecto localmente
-Clonar el repositorio:
+│   ├── fondo-1.webp           
+│   ├── imagenes-inicio.png   
+│   ├── imagenes-estilos.png   
+│   └── imagenes-api.png       
+│
+└── README.md                   # Documento con información del proyecto
 
-bash
-Copy
-Edit
-git clone https://github.com/camilaflorez12/ballet-camila-eloite.git
-Abrir index.html en tu navegador para comenzar.
 
 👩‍🎨 Autora
-Desarrollado por Camila Flórez como parte de una práctica de diseño y desarrollo web.
+Desarrollado por Camila Flórez.
 💬 ¡Inspirado en la pasión por el ballet y la enseñanza digital!
